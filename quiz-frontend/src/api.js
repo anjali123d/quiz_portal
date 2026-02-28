@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "http://localhost:5000/api"
+    baseURL: "https://quiz-portal-vmue.onrender.com/api"
 });
 
 // 🔐 Add interceptor to send token automatically
