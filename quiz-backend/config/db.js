@@ -11,7 +11,8 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.MONGO_URI);
+        let url="mongodb+srv://cosmosbvn_db_user:cosmos123@mcqtestcluster0.8lbkhd3.mongodb.net/?appName=mcqTestCluster0"
+        await mongoose.connect(process.env.MONGO_URI|| url);
         console.log("MongoDB Connected");
     } catch (error) {
         console.error("Database connection failed:", error.message);
